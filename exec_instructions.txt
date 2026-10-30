@@ -1,0 +1,1 @@
+iverilog -o test library.v counter_fsm.v tb_counter_fsm.v

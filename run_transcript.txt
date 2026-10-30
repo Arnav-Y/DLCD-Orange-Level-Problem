@@ -1,0 +1,56 @@
+VCD info: dumpfile tb_counter_fsm.vcd opened for output.
+Time = 10 | reset = 1 | run = 0 | state = HOLD | count = 0000 (0) | seg = 0111111
+---- RUN: counting up ----
+Time = 20 | reset = 0 | run = 1 | state = RUN  | count = 0000 (0) | seg = 0111111
+Time = 30 | reset = 0 | run = 1 | state = RUN  | count = 0001 (1) | seg = 0000110
+Time = 40 | reset = 0 | run = 1 | state = RUN  | count = 0010 (2) | seg = 1011011
+Time = 50 | reset = 0 | run = 1 | state = RUN  | count = 0011 (3) | seg = 1001111
+Time = 60 | reset = 0 | run = 1 | state = RUN  | count = 0100 (4) | seg = 1100110
+Time = 70 | reset = 0 | run = 1 | state = RUN  | count = 0101 (5) | seg = 1101101
+---- HOLD: count frozen ----
+Time = 80 | reset = 0 | run = 0 | state = HOLD | count = 0110 (6) | seg = 1111101
+Time = 90 | reset = 0 | run = 0 | state = HOLD | count = 0110 (6) | seg = 1111101
+Time = 100 | reset = 0 | run = 0 | state = HOLD | count = 0110 (6) | seg = 1111101
+Time = 110 | reset = 0 | run = 0 | state = HOLD | count = 0110 (6) | seg = 1111101
+Time = 120 | reset = 0 | run = 0 | state = HOLD | count = 0110 (6) | seg = 1111101
+---- RUN: on through the wrap-around ----
+Time = 130 | reset = 0 | run = 1 | state = RUN  | count = 0110 (6) | seg = 1111101
+Time = 140 | reset = 0 | run = 1 | state = RUN  | count = 0111 (7) | seg = 0000111
+Time = 150 | reset = 0 | run = 1 | state = RUN  | count = 1000 (8) | seg = 1111111
+Time = 160 | reset = 0 | run = 1 | state = RUN  | count = 1001 (9) | seg = 1101111
+Time = 170 | reset = 0 | run = 1 | state = RUN  | count = 1010 (a) | seg = 1110111
+Time = 180 | reset = 0 | run = 1 | state = RUN  | count = 1011 (b) | seg = 1111100
+Time = 190 | reset = 0 | run = 1 | state = RUN  | count = 1100 (c) | seg = 0111001
+Time = 200 | reset = 0 | run = 1 | state = RUN  | count = 1101 (d) | seg = 1011110
+Time = 210 | reset = 0 | run = 1 | state = RUN  | count = 1110 (e) | seg = 1111001
+Time = 220 | reset = 0 | run = 1 | state = RUN  | count = 1111 (f) | seg = 1110001
+Time = 230 | reset = 0 | run = 1 | state = RUN  | count = 0000 (0) | seg = 0111111
+  PASS: wrapped 1111 -> 0000
+Time = 240 | reset = 0 | run = 1 | state = RUN  | count = 0001 (1) | seg = 0000110
+Time = 250 | reset = 0 | run = 1 | state = RUN  | count = 0010 (2) | seg = 1011011
+Time = 260 | reset = 0 | run = 1 | state = RUN  | count = 0011 (3) | seg = 1001111
+Time = 270 | reset = 0 | run = 1 | state = RUN  | count = 0100 (4) | seg = 1100110
+Time = 280 | reset = 0 | run = 1 | state = RUN  | count = 0101 (5) | seg = 1101101
+Time = 290 | reset = 0 | run = 1 | state = RUN  | count = 0110 (6) | seg = 1111101
+Time = 300 | reset = 0 | run = 1 | state = RUN  | count = 0111 (7) | seg = 0000111
+Time = 310 | reset = 0 | run = 1 | state = RUN  | count = 1000 (8) | seg = 1111111
+Time = 320 | reset = 0 | run = 1 | state = RUN  | count = 1001 (9) | seg = 1101111
+---- HOLD ----
+Time = 330 | reset = 0 | run = 0 | state = HOLD | count = 1010 (a) | seg = 1110111
+Time = 340 | reset = 0 | run = 0 | state = HOLD | count = 1010 (a) | seg = 1110111
+Time = 350 | reset = 0 | run = 0 | state = HOLD | count = 1010 (a) | seg = 1110111
+---- RESET asserted mid-count ----
+Time = 360 | reset = 1 | run = 1 | state = HOLD | count = 0000 (0) | seg = 0111111
+---- RUN: counting up from 0 again ----
+Time = 370 | reset = 0 | run = 1 | state = RUN  | count = 0000 (0) | seg = 0111111
+Time = 380 | reset = 0 | run = 1 | state = RUN  | count = 0001 (1) | seg = 0000110
+Time = 390 | reset = 0 | run = 1 | state = RUN  | count = 0010 (2) | seg = 1011011
+=========================================
+ Increment checks passed : 28
+ Hold checks passed      : 9
+ Wrap-arounds seen       : 1
+ Errors                  : 0
+ RESULT: ALL TESTS PASSED
+=========================================
+tb_counter_fsm.v:159: $finish called at 391 (1s)
+
