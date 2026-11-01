@@ -1,8 +1,8 @@
 # DLCD Level-2, Problem 2
 ## 4-Bit Counter FSM with Run/Hold Control and 7-Segment Output
 
-**Team:** <Member 1>, <Member 2>, <Member 3>, <Member 4>
-**Section / Instructor:** <fill in>
+**Team:** Arnav Joshi, Arnav Yadav, Atharva Patel, Ayoush KS
+**Section / Instructor:** B, Deepti C
 
 ---
 
